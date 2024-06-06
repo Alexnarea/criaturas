@@ -1,0 +1,42 @@
+<form nz-form [formGroup]="form" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzFor]="'name'">Name</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="text" formControlName="name" id="name"/>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'description'">Description</nz-form-label>
+    <nz-form-control>
+      <textarea nz-input formControlName="description" id="description"></textarea>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'lastSee'">Last Seen</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="text" formControlName="lastSee" id="lastSee"/>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'countLastSee'">Count Last Seen</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="number" formControlName="countLastSee" id="countLastSee"/>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label [nzFor]="'extinct'">Extinct</nz-form-label>
+    <nz-form-control>
+      <input nz-input type="checkbox" formControlName="extinct" id="extinct"/>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <button nz-button type="submit" [disabled]="form.invalid">Submit</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
